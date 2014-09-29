@@ -1,0 +1,61 @@
+Quiz: Lesson 2
+
+Some exercises from lesson 2 materials:
+
+1. Name what each of the below is:
+
+  a = 1 
+  => ex. a is a local variable, and is a Fixnum object with value 1 
+
+  @a = 2
+  => instance variable with a Fixnum value of 2
+
+  user = User.new
+  => new User object titled user
+
+  user.name
+  => User object user calling of name variable 
+      -calling the name getter method
+
+  user.name = "Joe"
+  => setting "Joe" as the name of the new User object user
+      -the object user is calling the name setter instance method, resetting the object's name string value to "Joe"
+
+
+2. How does a class mixin a module?
+  => By using the keyword "include" and the name of the module inside of the class
+
+
+3. What's the difference between class variables and instance variables? 
+  => Class variables use "@@" and are called upon the class itself, instance variables use "@" and are for instantiations of objects created by the class
+    -class variables are also shared among the class and all descendants
+
+
+4. What does attr_accessor do?
+  => is a getter and setter method in one for instance variable of the class, allows you to both read and make changes to the variable
+
+
+5. How would you describe this expression: Dog.some_method
+  => Dog is a class and some_method is the class method that is being called on it
+
+
+6. In Ruby, what's the difference between subclassing and mixing in modules?
+  => You can only subclass (inherit) from one class, but you can mix in (composition) as many modules as you need. 
+  => You would typically use "is a" for subclasses, and "has a" for modules.
+    => A subclass will inherit all the behaviors of an animal superclass
+    => Modules are used when classes have multiple inheritances or when certain behaviors are shared among classes. but not every single one of them
+
+
+7. Given that I can instantiate a user like this: User.new('Bob'), what would the initialize method look like for the User class?
+  => def initialize(n)
+       @name = n
+        -self.name = n
+     end
+
+
+8. Can you call instance methods of the same class from other instance methods in that class?
+  => Yes
+
+
+9. When you get stuck, what's the process you use to try to trap the error?
+  => Use pry gem, and binding.pry to debug. Insert into each of the sections of code that need debugging.
